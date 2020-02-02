@@ -4,11 +4,9 @@ date:   2020-01-16 11:15:45 +0000
 categories: 
     - Artificial Intelligence
 modified: 2020-02-02
-description:
+description: Analysis of alternative biological/spiking neural network models.
 tags:
   - Spiking Neural Networks
-header:
-    image: "assets/img/brain-3955228_640.png"
 ---
 
 *Note:* This blog is for the purpose of increasing my understanding  and organising my thoughts of the topic. I welcome any and all feedback on the technical content, and on the writing style. My email can be found at the bottom of the page. 
