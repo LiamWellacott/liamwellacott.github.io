@@ -1,7 +1,8 @@
----
-layout: page
+--- 
 title: Research
 permalink: /research/
+modified: "2020-02-02"
+author_profile: true
 ---
 
 I am interested in biologically inspired computation. In particular I follow ongoing work in swarm intelligence and neurorobotics.

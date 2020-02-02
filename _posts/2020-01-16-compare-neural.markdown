@@ -1,8 +1,14 @@
 ---
-layout: post
 title:  "Exploring Biological Neuron Models"
 date:   2020-01-16 11:15:45 +0000
-categories: jekyll update
+categories: 
+    - Artificial Intelligence
+modified: 2020-02-02
+description:
+tags:
+  - Spiking Neural Networks
+header:
+    image: "assets/img/brain-3955228_640.png"
 ---
 
 *Note:* This blog is for the purpose of increasing my understanding  and organising my thoughts of the topic. I welcome any and all feedback on the technical content, and on the writing style. My email can be found at the bottom of the page. 
@@ -35,7 +41,7 @@ Nature is abundant with creatures able solve difficult computational problems wh
 
 In the 1950s Rosenblatt introduced the perceptron based on McColough and Pitts 1943 model of the neuron. Using this model, and with significant breakthroughs in training techniques (see backpropagation), perceptrons can be connected and trained to model complex problems effectively. Such networks are typically organised into layers consisting of an input, output, and one or more "hidden layers". This type of network is known as a multi-layer perceptron. Modern deep neural networks have developed significantly beyond multi-layer perceptrons. However, they do share some underlying structural features:
 
-<div style="text-align:center"><img src="/resources/2020-01-16-compare-neural/basicANN.png"/><p>Fig 1. Perceptron</p></div>
+<div style="text-align:center"><img src="/assets/img/2020-01-16-compare-neural/basicANN.png"/><p>Fig 1. Perceptron</p></div>
 
 - **Inputs/Outputs:** Numerical data, beyond the input layer this is the output of other neurons.
 - **Weights:** Indicates the strength of the connection between two neurons. The objective of training algorithms is to find the setting of these values which produces the "best" result for some application/problem.
@@ -49,11 +55,11 @@ Those familiar with ANNs will not have read anything shocking so far. However, w
 
 In short, the key method of informational propagation occurs when the potential difference in the cell rises to a critical point known as a threshold, this leads to a further rapid increase in potential difference known as an action potential or "spike" of activity. This action potential is propagated across the cell, which triggers the release of chemical transmitters known as neurotransmitters. These neurotransmitters bind to subsequent neural cells allowing the flow of ions into the cell, which in turn can raise (excite) the potential difference of the cell, possibly leading to the generation of a new action potential. Depending on the neurotransmitter the effect can also be to lower (inhibit) the generation of an action potential.
 
-<div style="text-align:center"><img src="/resources/2020-01-16-compare-neural/Temporal_summation.jfif" height="400em"/><p>Fig 2. Spike example</p></div>
+<div style="text-align:center"><img src="/assets/img/2020-01-16-compare-neural/Temporal_summation.jfif" height="400em"/><p>Fig 2. Spike example</p></div>
 
 Using the structural features outlined previously we can give examples of how the popular abstract model of the neuron differs greatly from its biological source:
 
-<div style="text-align:center"><img src="/resources/2020-01-16-compare-neural/neuron.png"/><p>Fig 3. Biological Neuron</p></div>
+<div style="text-align:center"><img src="/assets/img/2020-01-16-compare-neural/neuron.png"/><p>Fig 3. Biological Neuron</p></div>
 
 - **Inputs/Outputs:** There is clearly no numerical abstraction at the lowest level. inputs and outputs for intermediate neurons (i.e. not sensor/motor neurons) are ultimately chemical neurotransmitters. However, there is also information in the state of chemical concentrations inside the cell (current potential), length of cell, spike timing properties, etc.
 - **Weights:** In the model this represents the strength and role (excitatory/inhibitory) of the synaptic connection. In a physical dynamic system there are efficiency limitations and secondary effects. For example the greater the length of the connection the stronger the signal and more time to propagate. The connection strength is thought to increase when a neuron consistently interacts with another (see [Hebbian learning](https://en.wikipedia.org/wiki/Hebbian_theory)).
