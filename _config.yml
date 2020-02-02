@@ -47,7 +47,7 @@ comments:
         type               : # "date"
         options:
           format           : # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
-    endpoint               : https://staticman3.herokuapp.com/v3/entry/github/ # URL of your own deployment with trailing slash, will fallback to the public instance
+    endpoint               : # URL of your own deployment with trailing slash, will fallback to the public instance
   reCaptcha:
     siteKey                : "6LfeCdUUAAAAANoQRrMA3SnibZp1V08Vv0B32vnz"
     secret                 : "bq+IL1nk3vVQTDRtmW7sXLVbxC4azl/RAqmq+1id1sUElAqsubIAqkw+y0dxkd35tEZIWamNTfy5NROsAbAz+dGC2cJOA1QIBqGpy7Afzh5UumXWfkiURERzM5yhsW/94VZs0qOd/oKSlvhuLXfHMSHh4C75/l+4mzOw4fs6Sx8="
