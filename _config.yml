@@ -22,7 +22,7 @@ subtitle                 : "Robotics, Artificial Intelligence, and general blogg
 name                     : "Liam Wellacott"
 description              : "Robotics, Artificial Intelligence, and general blogging"
 url                      : "https://liamwellacott.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
+baseurl                  : "/" # the subpath of your site, e.g. "/blog"
 repository               : "LiamWellacott/liamwellacott.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : /assets/img/brain-3955228_640.png # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
@@ -269,8 +269,6 @@ defaults:
       comments: true
       share: true
       related: true
-
-defaults:
   # _pages
   - scope:
       path: ""
