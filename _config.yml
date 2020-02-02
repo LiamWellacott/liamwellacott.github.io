@@ -12,70 +12,58 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "neon" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
-title                    : "Site Title"
+locale                   : "en-GB"
+title                    : "Liam Wellacott"
 title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Your Name"
-description              : "An amazing website."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+subtitle                 : "Robotics, Artificial Intelligence, and general blogging" # site tagline that appears below site title in masthead
+name                     : "Liam Wellacott"
+description              : "Robotics, Artificial Intelligence, and general blogging"
+url                      : "https://liamwellacott.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+repository               : "LiamWellacott/liamwellacott.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+teaser                   : /assets/img/brain-3955228_640.png # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
-  disqus:
-    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
-  discourse:
-    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
-  facebook:
-    # https://developers.facebook.com/docs/plugins/comments
-    appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
-  utterances:
-    theme                : # "github-light" (default), "github-dark"
-    issue_term           : # "pathname" (default)
-staticman:
-  allowedFields          : # ['name', 'email', 'url', 'message']
-  branch                 : # "master"
-  commitMessage          : # "New comment by {fields.name}"
-  filename               : # comment-{@timestamp}
-  format                 : # "yml"
-  moderation             : # true
-  path                   : # "/_data/comments/{options.slug}" (default)
-  requiredFields         : # ['name', 'email', 'message']
-  transforms:
-    email                : # "md5"
-  generatedFields:
-    date:
-      type               : # "date"
-      options:
-        format           : # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
-  endpoint               : # URL of your own deployment with trailing slash, will fallback to the public instance
-reCaptcha:
-  siteKey                :
-  secret                 :
-atom_feed:
-  path                   : # blank (default) uses feed.xml
-search                   : # true, false (default)
-search_full_content      : # true, false (default)
-search_provider          : # lunr (default), algolia, google
-algolia:
-  application_id         : # YOUR_APPLICATION_ID
-  index_name             : # YOUR_INDEX_NAME
-  search_only_api_key    : # YOUR_SEARCH_ONLY_API_KEY
-  powered_by             : # true (default), false
-google:
-  search_engine_id       : # YOUR_SEARCH_ENGINE_ID
-  instant_search         : # false (default), true
+  provider               : staticman_v2 # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  staticman:
+    allowedFields          : ['name', 'email', 'message']
+    branch                 : "master"
+    commitMessage          : # "New comment by {fields.name}"
+    filename               : # comment-{@timestamp}
+    format                 : # "yml"
+    moderation             : # true
+    path                   : # "/_data/comments/{options.slug}" (default)
+    requiredFields         : ['name', 'message']
+    transforms:
+      email                : # "md5"
+    generatedFields:
+      date:
+        type               : # "date"
+        options:
+          format           : # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+    endpoint               : # URL of your own deployment with trailing slash, will fallback to the public instance
+  reCaptcha:
+    siteKey                :
+    secret                 :
+  atom_feed:
+    path                   : # blank (default) uses feed.xml
+  search                   : # true, false (default)
+  search_full_content      : # true, false (default)
+  search_provider          : # lunr (default), algolia, google
+  algolia:
+    application_id         : # YOUR_APPLICATION_ID
+    index_name             : # YOUR_INDEX_NAME
+    search_only_api_key    : # YOUR_SEARCH_ONLY_API_KEY
+    powered_by             : # true (default), false
+  google:
+    search_engine_id       : # YOUR_SEARCH_ENGINE_ID
+    instant_search         : # false (default), true
 # SEO Related
 google_site_verification :
 bing_site_verification   :
@@ -84,9 +72,9 @@ naver_site_verification  :
 
 # Social Sharing
 twitter:
-  username               :
+  username               : LiamWellacott
 facebook:
-  username               :
+  username               : liam.wellacott
   app_id                 :
   publisher              :
 og_image                 : # Open Graph/Twitter default site image
@@ -107,53 +95,43 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            :
+  name             : "Liam Wellacott"
+  avatar           : "/assets/img/LiamWellacott2019.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "I am a PhD student at the Edinburgh Centre for Robotics, my work is in the area of brain inspired software for robots (neurorobotics) which I write about here. I'm also interested in history, philosophy, and other AI approaches, which I may occasionally write about."
+  location         : "Edinburgh, United Kingdom"
+  email            : liamwellacott@gmail.com
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      # url: mailto:your.name@email.com
-    - label: "Website"
+    - label: "Edinburgh Robotics"
       icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
+      url: "https://www.edinburgh-robotics.org"
+    - label: "Heriot Watt Robotics Lab"
+      icon: "fas fa-fw fa-link"
+      url: "http://www.macs.hw.ac.uk/RoboticsLab/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
+      url: "https://twitter.com/LiamWellacott"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
+      url: "https://www.facebook.com/liam.wellacott"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+      url: "https://github.com/LiamWellacott"
 
 # Site Footer
 footer:
   links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: mailto:liamwellacott@gmail.com
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      # url:
+      url: "https://twitter.com/LiamWellacott"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
-      # url:
+      url: "https://www.facebook.com/liam.wellacott"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
-      # url:
-    - label: "Bitbucket"
-      icon: "fab fa-fw fa-bitbucket"
-      # url:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url:
-
+      url: "https://github.com/LiamWellacott"
 
 # Reading Files
 include:
@@ -184,8 +162,6 @@ exclude:
   - Rakefile
   - README
   - tmp
-  - /docs # ignore Minimal Mistakes /docs
-  - /test # ignore Minimal Mistakes /test
 keep_files:
   - .git
   - .svn
