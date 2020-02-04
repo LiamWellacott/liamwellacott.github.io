@@ -11,12 +11,12 @@ header:
   image: /assets
 ---
 
+This week I am summarising "" by y (20zz), you can find more information about this work [here]().
 
+## Background and motivation
 
-# What is the work?
+## The work in detail
 
-# Why is it interesting?
-
-# How has/can it be developed/applied?
+## Extensions and applications
 
 
