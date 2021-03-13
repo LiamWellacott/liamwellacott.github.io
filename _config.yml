@@ -73,10 +73,10 @@ naver_site_verification  :
 # Social Sharing
 twitter:
   username               : LiamWellacott
-facebook:
-  username               : liam.wellacott
-  app_id                 :
-  publisher              :
+# facebook:
+#   username               : liam.wellacott
+#   app_id                 :
+#   publisher              :
 og_image                 : assets/img/LiamWellacott2019.jpg # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
@@ -126,9 +126,9 @@ footer:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/LiamWellacott"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      url: "https://www.facebook.com/liam.wellacott"
+    # - label: "Facebook"
+    #   icon: "fab fa-fw fa-facebook-square"
+    #   url: "https://www.facebook.com/liam.wellacott"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/LiamWellacott"
