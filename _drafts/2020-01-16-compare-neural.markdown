@@ -10,7 +10,7 @@ tags:
   - Spiking Neural Networks
 ---
 
-*Note:* This blog is for the purpose of increasing my understanding  and organising my thoughts of the topic. I welcome any and all feedback on the technical content, and on the writing style. My email can be found at the bottom of the page. 
+*Note:* This blog is for the purpose of increasing my understanding  and organising my thoughts of the topic. I welcome any and all feedback on the technical content, and on the writing style.
 
 # TODO
 - Spell check
