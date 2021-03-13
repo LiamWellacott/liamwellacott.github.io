@@ -5,6 +5,9 @@
 ```
 # get minimal mistakes dependencies
 bundle install
+
+# may need to occasionally run 
+bundle update github-pages
 ```
 
 # Local build
