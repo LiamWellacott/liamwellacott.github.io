@@ -50,6 +50,7 @@ Chollet then switches focus to **measuring intelligence**. Most measures test **
 
 --- 
 "If intelligence lies in the process of acquiring skills, then there is no task X such that skill at X demonstrates intelligence, unless X is actually a meta-task involving skill-acquisition across a broad range of tasks."
+
 --- 
 
 **Generalisation** is the heart of the criticism of current AI and benchmarks discussed so far. Informally, generalisation is "the ability to handle situations (or tasks) that differ from previously encountered situations".
@@ -75,6 +76,7 @@ Rather than regurgitating definitions and arguments from the paper I encourage t
 
 ---
 "The intelligence of a system is a measure of its **skill-acquisition efficiency** over a **scope of tasks**, with respect to **priors**, **experience**, and **generalization difficulty**."
+
 ---
 
 **Skill-acquisition efficiency** rather than skill should be the goal of AI developers. A system high in this measure is able to quickly adapt to new situations.
