@@ -7,8 +7,6 @@ modified:
 description:
 tags: 
   - 
-header:
-  image: /assets
 ---
 
 In this post I am summarising "On the Measure of Intelligence" by François Chollet (2019). I hope this post encourages you to read the full work which you can find [here](https://arxiv.org/pdf/1911.01547.pdf). You can also go to the [ARC GitHub page](https://github.com/fchollet/ARC) to try out the tasks.
