@@ -33,7 +33,7 @@ Chollet makes three important contributions corresponding to the three parts of 
 
 1.  **Context and history.** A well written summary of the history of defining and measuring intelligence.
 2.  **A new perspective.** A formal definition of intelligence as "skill-acquisition efficiency" and an outline of the properties a benchmark of intelligence should have.
-3. **A benchmark proposal: the ARC dataset.** An initial attempt to design a benchmark to test human and human-like general fluid intelligence.
+3. **A benchmark proposal: the ARC dataset.** An initial attempt to design a benchmark to test human and human-like [general fluid intelligence](https://en.wikipedia.org/wiki/Fluid_and_crystallized_intelligence).
 
 ### Context and history
 
@@ -81,7 +81,7 @@ Rather than regurgitating definitions and arguments from the paper I encourage t
 
 **Skill-acquisition efficiency** rather than skill should be the goal of AI developers. A system high in this measure is able to quickly adapt to new situations.
 
-The system must have a limited **scope of tasks**. Chollet uses the no free lunch theorem to explain that an AI on the space of all possible problems would be no better than a brute force algorithm. Therefore to meaningfully be called intelligent some restrictions on the problem space are required. The task scope may be sufficiently broad (domain of human experience) that the intelligence can still be called "general". When comparing intelligent systems there should be a shared task scope to make the comparison fair.
+The system must have a limited **scope of tasks**. Chollet uses the [no free lunch theorem](https://en.wikipedia.org/wiki/No_free_lunch_theorem) to explain that an AI on the space of all possible problems would be no better than a brute force algorithm. Therefore to meaningfully be called intelligent some restrictions on the problem space are required. The task scope may be sufficiently broad (domain of human experience) that the intelligence can still be called "general". When comparing intelligent systems there should be a shared task scope to make the comparison fair.
 
 By limiting the task scope we can make use of **priors**. Priors are assumptions about the environment that have been encoded ahead of any **experience**. On the other hand, experience is gained through exposure to the environment (training in AI context). In humans, priors are innate cognitive faculties (e.g. spoken language) and learn new skills through experience (e.g. written language). Finally, **generalisation difficulty** is a property of a task which refers to how much behaviour has to differ from training in order to successfully complete the task. A system which can complete high generalisation difficulty tasks has made a good abstraction of the problem and is flexible enough to apply it to the new situation. 
 
@@ -114,12 +114,23 @@ The goals of ARC are:
 
 Tasks in ARC consist of variable sized input and output grids. The test-taker must analyse training input/output grids to determine the abstract rule used to generate the output. The test-taker has three attempts to create the correct output grid and receives a binary signal to indicate whether the solution is correct or not.
 
-The priors assumed by the test are based on Core Knowledge from the psychological literature on human priors. Chollet describes this in full as motivation in the previous parts, and in this section provides examples of tasks which involve the priors used in ARC. Briefly, the priors are:
+The priors assumed by the test are based on Core Knowledge from the psychological literature on human priors. Chollet describes this in full as motivation in the previous parts, and in this section provides examples of tasks which involve the priors used in ARC. The examples below are some of those given in the [paper](https://arxiv.org/pdf/1911.01547.pdf). Briefly, the priors are:
 
-- Object **cohesion** (objects take up contiguous space), **persistence** (objects don't disappear under noise or occlusion), and **contact** (objects can touch)
+- Object **cohesion** (objects take up contiguous space), **persistence** (objects don't disappear under noise or occlusion) , and **contact** (objects can touch)
+
+![Denoise task](/assets/img/2021-03-23-on-the-measure-of-intelligence/denoise.png){: .align-center}
+{% include caption.html text="Task exercising object persistence, test-taker must denoise the grid to leave only objects behind." %}
+
 - **Goal directedness**. Chollet points out that ARC doesn't have a concept of time, but input/output grids could be modelled as start/end states of a process involving intentionality. The prior may not be needed, but may be useful.
 - **Numbers and counting priors**, tasks use small numbers and involve counting/sorting objects.
+
+![Counting task](/assets/img/2021-03-23-on-the-measure-of-intelligence/most.png){: .align-center}
+{% include caption.html text="Task exercising counting objects, test-taker must count the number of each object and return the object which appears the most times." %}
+
 - **Geometry and topology priors**. Lines and shapes. Symmetry, rotation, and translation. Scaling and distortion. Being in/out of a container. Line drawing and projections. Copying repeating objects.
+
+![Symmetry task](/assets/img/2021-03-23-on-the-measure-of-intelligence/symmetry.png){: .align-center}
+{% include caption.html text="Task exercising understanding symmetry, test-taker must draw the shape around a marker." %}
 
 In summary, ARC is a first attempt at a new kind of intelligence benchmark. ARC explicitly measures the kind of general intelligence we (humans) use, and it provides a new goal for AI developers to measure progress against. Chollet describes ARC as a work in progress, in fact constant update of ARC to add new tasks and features is expected. In the last part of the post I discuss what is next for this work.
 
@@ -129,10 +140,15 @@ Chollet identifies several topics of further work for ARC:
 
 - Generalisation difficulty is used in the formalisation of intelligence but is not currently quantified for each task.
 - Validity for the test should be established using a large human sample and comparing results to that of other valid tests.
-- The dataset and diversity of tasks should be improved to ensure the test is not "gamed" by an AI test-taker.
-- During evaluation a binary feedback signal is used. Chollet suggests that the test taker could interact with the example generator to request more granular feedback on a solution.
-- The test is reliant on Core Knowledge priors. Understanding human priors is an open question, therefore ARC should evolve with this changing understanding.
+- The dataset and diversity of tasks should be improved to ensure the test is not "gamed" by an AI test-taker. In other words, it should not be possible to hard-code or "buy" experience of tasks, but require good abstraction and generalisation.
+- During evaluation a binary feedback signal is used. Chollet suggests that the test taker could interact with an "example generator" to request more granular feedback on a solution.
+- The test is reliant on Core Knowledge priors. Understanding human priors is an open question, therefore ARC should evolve with this changing understanding. Furthermore, the implementation of these priors in ARC may be incomplete.
+
+I would add the following personal open questions:
+
+- How do we measure (in practice) the algorithmic complexity for priors, experience, and generalisation difficulty?
+- How would the addition of the "example generator" improve the feedback signal to the test-taker? Does improving the signal come at a prohibitive cost of complexity in the "example generator".
 
 In this work Chollet is primarily concerned with measuring human-like general intelligence. While reading I was thinking about how current AI doesn't achieve the kind of generalisation we see in even "simple" animals. Particularly in robotics. There are a number of useful applications (e.g. warehouse stock manipulation, package delivery) which don't require the full human task scope to be "solved". I think a great application of Chollet's work would be to apply it to non-human intelligence benchmarks. One I found recently which could be an interesting candidate is the [Animal AI Testbed](http://animalaiolympics.com/AAI/). By using Chollet's definitions we can avoid promoting "shortcuts" in our measure of progress, and promote developing flexible systems.
 
-Thanks for reading, and thanks to François Chollet a very well written step toward better AI.
+Thanks for reading, and thanks to François Chollet for a very well written step toward better AI.

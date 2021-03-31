@@ -5,7 +5,7 @@ modified: "2020-02-02"
 author_profile: true
 ---
 
-I am interested in biologically inspired computation. In particular I follow ongoing work in swarm intelligence and neurorobotics.
+I am interested in neural computation and robotics, see [google scholar profile](https://scholar.google.com/citations?user=W1YfVjQAAAAJ&hl=en&oi=ao) for published work.
 
 # Awards and Training
 
